@@ -3,5 +3,6 @@ export enum Routes {
     test = 'test',
     authRouter = 'authRouter',
     mainrouter = 'mainrouter',
-    homescreen = 'homescreen'
+    homescreen = 'homescreen',
+    register = 'register'
 }

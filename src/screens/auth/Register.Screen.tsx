@@ -6,13 +6,14 @@ import {NavigationParamList} from '../../types/navigation.types';
 import {Routes} from '../../router/routes';
 import {Input} from '../../components/Inputs.tsx';
 import {Button} from '../../components/Button.tsx';
+import {colors} from '../../theme/colors.ts';
 // import {colors} from '../../theme/colors.ts';
 
-export const WelcomeScreen: React.FC<
-  NativeStackScreenProps<NavigationParamList, Routes.welcome>
+export const RegisterScreen: React.FC<
+  NativeStackScreenProps<NavigationParamList, Routes.register>
 > = ({navigation}) => {
-  const onRegisterPress = () => {
-    navigation.navigate(Routes.register);
+  const onSignInPress = () => {
+    navigation.navigate(Routes.welcome);
   };
   return (
     <View style={styles.container}>
@@ -22,9 +23,10 @@ export const WelcomeScreen: React.FC<
           source={require('../../../src/assets/images/logo_Avrasiya.png')}
         />
       </View>
-      <Text style={styles.welcome}>Welcome Back!</Text>
-      <Text style={styles.text}>Please Log into your existing account</Text>
+      <Text style={styles.welcome}>Create Your Account</Text>
+      {/* <Text style={styles.text}>Please Log into your existing account</Text> */}
       <View style={styles.input}>
+        <Input style={styles.inp} placeholder="UserName" type="text" />
         <Input style={styles.inp} placeholder="Your Email" type="text" />
         <Input
           style={styles.inp}
@@ -33,13 +35,23 @@ export const WelcomeScreen: React.FC<
           icon={require('../../assets/vectors/eye.svg')}
           iconPosition="right"
         />
+        <Input
+          style={styles.inp}
+          placeholder="Confirm Password"
+          type="password"
+          icon={require('../../assets/vectors/eye.svg')}
+          iconPosition="right"
+        />
       </View>
       <View style={{marginTop: 7}}>
-        <Button text="Log in" onPress={() => console.log('clicked')} />
+        <Button text="Register" onPress={() => console.log('clicked')} />
       </View>
-      <Text onPress={onRegisterPress} style={styles.toRegister}>
-        Get Registered
-      </Text>
+      <View style={styles.texts}>
+        <Text style={styles.question}>Already have an Account?</Text>
+        <Text onPress={onSignInPress} style={styles.signin}>
+          Sign In
+        </Text>
+      </View>
     </View>
   );
 };
@@ -82,5 +94,17 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
     marginTop: 15,
+  },
+  texts: {
+    flexDirection: 'row',
+    alignSelf: 'center',
+    marginTop: 20,
+  },
+  question: {
+    color: colors.white,
+  },
+  signin: {
+    color: colors.white,
+    marginLeft: 25,
   },
 });
