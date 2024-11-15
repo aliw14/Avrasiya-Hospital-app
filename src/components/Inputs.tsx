@@ -207,11 +207,11 @@ const styles = StyleSheet.create({
   },
   focused: {
     borderColor: colors.primary.base,
+    color: colors.white,
   },
   wrapper: {
     flexDirection: 'row',
     alignItems: 'center',
-    borderWidth: 1,
     borderColor: colors.sky.light,
     borderRadius: 8,
     paddingHorizontal: 16,
@@ -225,6 +225,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     height: '100%',
+    color: colors.white,
     // ...TypographyStyles.RegularNoneRegular,
   },
   error: {

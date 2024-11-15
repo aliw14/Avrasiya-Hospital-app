@@ -44,7 +44,7 @@ export const RegisterScreen: React.FC<
         />
       </View>
       <View style={{marginTop: 7}}>
-        <Button text="Register" onPress={() => console.log('clicked')} />
+        <Button type='default' text="Register" onPress={() => console.log('clicked')} />
       </View>
       <View style={styles.texts}>
         <Text style={styles.question}>Already have an Account?</Text>
@@ -89,6 +89,7 @@ const styles = StyleSheet.create({
   },
   inp: {
     margin: 16,
+    borderWidth:1
   },
   toRegister: {
     color: '#fff',

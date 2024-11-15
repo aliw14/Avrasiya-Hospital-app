@@ -2,7 +2,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationParamList} from '../types/navigation.types';
 import {Routes} from './routes';
 import {defaultScreenOptions} from '../configs/navigation.configs';
-import HomeScreen from '../screens/Home.Screen';
+import { HomeScreen } from '../screens/Home.Screen';
 
 export const MainRouter = () => {
   const MainStack = createNativeStackNavigator<NavigationParamList>();
@@ -10,7 +10,7 @@ export const MainRouter = () => {
     <MainStack.Navigator
       initialRouteName={Routes.test}
       screenOptions={defaultScreenOptions}>
-      <MainStack.Screen name={Routes.homescreen} component={HomeScreen} />
+      <MainStack.Screen name={Routes.home} component={HomeScreen} />
     </MainStack.Navigator>
   );
 };

@@ -14,6 +14,9 @@ export const WelcomeScreen: React.FC<
   const onRegisterPress = () => {
     navigation.navigate(Routes.register);
   };
+  const onLoginPressed = () => {
+    navigation.navigate(Routes.home);
+  };
   return (
     <View style={styles.container}>
       <View>
@@ -35,7 +38,7 @@ export const WelcomeScreen: React.FC<
         />
       </View>
       <View style={{marginTop: 7}}>
-        <Button text="Log in" onPress={() => console.log('clicked')} />
+        <Button type="default" text="Log in" onPress={onLoginPressed} />
       </View>
       <Text onPress={onRegisterPress} style={styles.toRegister}>
         Get Registered
@@ -77,6 +80,7 @@ const styles = StyleSheet.create({
   },
   inp: {
     margin: 16,
+    borderWidth:1
   },
   toRegister: {
     color: '#fff',
