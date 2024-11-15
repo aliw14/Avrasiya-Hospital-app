@@ -8,6 +8,6 @@ export type NavigationParamList = {
     [Routes.test]: undefined;
     [Routes.mainrouter]: undefined;
     [Routes.welcome]: undefined;
-    [Routes.homescreen]: undefined;
+    [Routes.home]: undefined;
     [Routes.register]: undefined;
 };
