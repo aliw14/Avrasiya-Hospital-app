@@ -7,14 +7,14 @@ export interface IButton {
   text: string;
   onPress?: () => void;
   type?: 'text' | 'default';
-  rightIcon?: React.FC<SvgProps>; // Add this prop
+  rightIcon?: React.FC<SvgProps>;
 }
 
 export const Button: React.FC<IButton> = ({
   text,
   onPress,
   type = 'default',
-  rightIcon: RightIcon, // Destructure rightIcon
+  rightIcon: RightIcon,
 }) => {
   const getButtonStyle = () => {
     switch (type) {
@@ -45,7 +45,8 @@ export const Button: React.FC<IButton> = ({
         <Text style={getTextStyle()}>{text}</Text>
         {RightIcon && (
           <View style={styles.iconContainer}>
-            <SvgImage style={styles.iconContainer}
+            <SvgImage
+              style={styles.iconContainer}
               source={require('../assets/svgs/arrow_right.svg')}></SvgImage>
           </View>
         )}
@@ -87,8 +88,8 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     marginLeft: 8,
-    width:20,
-    height:20,
-    borderWidth:1
+    width: 20,
+    height: 20,
+    borderWidth: 1,
   },
 });
