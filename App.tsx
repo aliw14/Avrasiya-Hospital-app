@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
-import {SafeAreaView, StyleSheet, View} from 'react-native';
-import Router from './src/router/Router';
 import BootSplash from 'react-native-bootsplash';
+import {NavigationContainer} from '@react-navigation/native';
+import {TabRouter} from './src/router/Tab.Router';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {StyleSheet} from 'react-native';
 
 function App(): React.JSX.Element {
   useEffect(() => {
@@ -16,9 +18,9 @@ function App(): React.JSX.Element {
   }, []);
   return (
     <SafeAreaView style={styles.safeArea}>
-      <View style={styles.root}>
-        <Router />
-      </View>
+      <NavigationContainer>
+        <TabRouter />
+      </NavigationContainer>
     </SafeAreaView>
   );
 }
@@ -26,10 +28,6 @@ function App(): React.JSX.Element {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
-  },
-  root: {
-    flex: 1,
-    backgroundColor: '#fff',
   },
 });
 

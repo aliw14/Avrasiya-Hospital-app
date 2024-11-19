@@ -4,5 +4,9 @@ export enum Routes {
     authRouter = 'authRouter',
     mainrouter = 'mainrouter',
     home = 'home',
-    register = 'register'
+    register = 'register',
+    medicalDepartment = 'medicalDepartment',
+    doctors = 'doctors',
+    randevu = 'randevu',
+    results = 'results'
 }

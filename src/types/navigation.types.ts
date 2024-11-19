@@ -10,4 +10,8 @@ export type NavigationParamList = {
     [Routes.welcome]: undefined;
     [Routes.home]: undefined;
     [Routes.register]: undefined;
+    [Routes.medicalDepartment]: undefined;
+    [Routes.doctors]: undefined;
+    [Routes.randevu]: undefined;
+    [Routes.results]: undefined;
 };
