@@ -1,0 +1,18 @@
+export const departmentMap: { [key: string]: string[] } = {
+    A: ['Anesteziologiya ve reanimasiya'],
+    D: ['Dermatovenerologiya', 'Dietologiya', 'Damar Cərrahiyyəsi'],
+    E: ['Endokrinologiya'],
+    F: ['Fizioterapiya'],
+    G: ['Ginekologiya'],
+    H: ['Hepotologiya'],
+    I: ['Invaziv Radiologiya', 'Işemik Insult Mərkəzi'],
+    K: ['Kardiologiya'],
+    L: ['Laboratoriya'],
+    N: ['Nevrologiya', 'Neyrocərrahiyyə'],
+    O: ['Oftalmologiya', 'Otorinolarinqologiya'],
+    P: ['Pediatriya', 'Plastik cərrahiyyə', 'Psixonevroloji Sağlamlıq Mərkəzi'],
+    R: ['Radiologiya'],
+    T: ['Terapiya', 'Travmotologiya və Ortopediya', 'Təcili Tibbi Yardım'],
+    U: ['Urologiya', 'Uşaq Cərrahiyyəsi'],
+    Ü: ['Ümumi Cərrahiyyə'],
+};

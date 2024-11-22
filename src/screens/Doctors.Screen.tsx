@@ -27,7 +27,7 @@ export const DoctorsScreen: React.FC<
   const handleSearch = (text: string) => {
     setSearchTerm(text);
     if (text.trim() === '') {
-      setFilteredDoctors(Doctors); // Reset to full list if search is empty
+      setFilteredDoctors(Doctors);
     } else {
       const filtered = Doctors.filter(doctor =>
         doctor.name.toLowerCase().includes(text.toLowerCase()),
