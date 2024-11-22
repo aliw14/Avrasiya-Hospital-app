@@ -31,7 +31,11 @@ export const RandevuScreen: React.FC = () => {
           <TextInput style={styles.input} placeholder="Ad, soyad*" />
           <TextInput style={styles.input} placeholder="Telefon*" />
           <TextInput style={styles.input} placeholder="Email*" />
-          <TextInput style={styles.bigInput} placeholder="Email*" />
+          <TextInput
+            multiline={true}
+            style={styles.bigInput}
+            placeholder="Qeydlər*"
+          />
         </View>
         <View style={styles.buttonContainer}>
           <Button text={'Randevu al'}></Button>

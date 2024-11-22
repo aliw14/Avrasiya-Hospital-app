@@ -167,7 +167,7 @@ export const Input: React.FC<IInput> = ({
           focused && styles.focused,
           props.disabled && styles.wrapperDisabled,
         ]}
-        placeholderTextColor={props.disabled ? colors.sky.base : colors.white}
+        placeholderTextColor={props.disabled ? colors.sky.base : colors.black}
       />
     );
   };
